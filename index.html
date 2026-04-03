@@ -91,8 +91,8 @@ body {
 	z-index: 1;
 }
 		</style>
-		<link id="-gd-engine-icon" rel="icon" type="image/png" href="Client.icon.png" />
-<link rel="apple-touch-icon" href="Client.apple-touch-icon.png"/>
+		<link id="-gd-engine-icon" rel="icon" type="image/png" href="Client_v2.icon.png" />
+<link rel="apple-touch-icon" href="Client_v2.apple-touch-icon.png"/>
 
 	</head>
 	<body>
@@ -105,13 +105,13 @@ body {
 		</noscript>
 
 		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="Client.png" alt="">
+			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="Client_v2.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
 		<script src="discord-sdk.js"></script>
-		<script src="Client.js"></script>
+		<script src="Client_v2.js"></script>
 		<script>
 // --- DISCORD SDK INTEGRATION ---
 const CLIENT_ID = "1489424717004669049";
@@ -138,7 +138,7 @@ async function setupDiscord() {
 setupDiscord().catch(console.error);
 // -------------------------------
 
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"Client","experimentalVK":false,"fileSizes":{"Client.pck":7928640,"Client.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"Client_v2","experimentalVK":false,"fileSizes":{"Client_v2.pck":7928640,"Client_v2.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
