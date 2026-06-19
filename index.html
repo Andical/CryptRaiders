@@ -3,8 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-		<title>DiscordGame</title>
-		<script src="coi-serviceworker.js"></script>
+		<title>Crypt Raiders Online</title>
 		<style>
 html, body, #canvas {
 	margin: 0;
@@ -91,8 +90,8 @@ body {
 	z-index: 1;
 }
 		</style>
-		<link id="-gd-engine-icon" rel="icon" type="image/png" href="Client_v2.icon.png" />
-<link rel="apple-touch-icon" href="Client_v2.apple-touch-icon.png"/>
+		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
 	</head>
 	<body>
@@ -105,40 +104,14 @@ body {
 		</noscript>
 
 		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="Client_v2.png" alt="">
+			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
-		<script src="discord-sdk.js"></script>
-		<script src="Client_v2.js"></script>
+		<script src="index.js"></script>
 		<script>
-// --- DISCORD SDK INTEGRATION ---
-const CLIENT_ID = "1489424717004669049";
-let discordSdk = null;
-
-async function setupDiscord() {
-	if (typeof Discord === 'undefined') return;
-	discordSdk = new Discord.DiscordSDK(CLIENT_ID);
-	await discordSdk.ready();
-	
-	const { code } = await discordSdk.commands.authorize({
-		client_id: CLIENT_ID,
-		response_type: "code",
-		state: "",
-		prompt: "none",
-		scope: ["identify", "guilds"],
-	});
-	
-	// Store for Godot to find later
-	window.discord_user = await discordSdk.commands.authenticate({ code });
-	console.log("Discord Authenticated:", window.discord_user);
-}
-
-setupDiscord().catch(console.error);
-// -------------------------------
-
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"Client_v2","experimentalVK":false,"fileSizes":{"Client_v2.pck":7928640,"Client_v2.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":13561048,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
